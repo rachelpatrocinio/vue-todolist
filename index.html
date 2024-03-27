@@ -10,7 +10,12 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        <!-- <h1>{{ message }}</h1> -->
+        <ul>
+            <li v-for="todo in todos"> 
+                <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
+                <p v-else> {{ todo.text }} </p>
+            </li>
+        </ul>
     </div>
     
     <script src="./js/app.js"></script>
