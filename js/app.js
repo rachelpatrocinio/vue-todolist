@@ -38,12 +38,16 @@ createApp({
         },
         addTodo(){
             // console.log(this.newTodo);
-            this.newTodo = {
-                text: this.newTodo,
-                done: false
-            };
-            this.todos.push(this.newTodo);
-            this.newTodo= '';
+            if(this.newTodo !== ''){
+                this.newTodo = {
+                    text: this.newTodo,
+                    done: false
+                };
+                this.todos.push(this.newTodo);
+                this.newTodo= '';
+            }else{
+                alert("Scrivi qualcosa");
+            }
         },
         done(todo){
             // console.log(todo);
