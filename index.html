@@ -28,7 +28,7 @@
                             <button @click="addTodo"><i class="fa-solid fa-plus"></i></button>
                         </div>
                         <ul class="todo-list">
-                            <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex flex-wrap"> 
+                            <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex space-between"> 
                                 <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
                                 <p v-else> {{ todo.text }} </p>
                                 <i @click="deleteTodo(todo, i)"class="fa-solid fa-trash delete-icon"></i>
