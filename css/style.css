@@ -68,10 +68,11 @@ ul,ol,menu{
 }
 
 .input-todo + button{
-    width: 10%;
+    width: 40px;
+    padding: 3px;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 10px;
     transform: translate(-50%, -50%);
 }
 
