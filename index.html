@@ -20,22 +20,26 @@
         </header>
 
         <main class="main-content">
-            <div class="container">
+            <section class="container">
                 <div class="row">
-                    <input @keydown.enter="addTodo" v-model="newTodo" type="text">
-                    <button @click="addTodo">ADD</button>
-                    <ul>
-                        <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex"> 
-                            <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
-                            <p v-else> {{ todo.text }} </p>
-                            <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>
-                        </li>
-                    </ul>
+                    <div class="col">
+                        <div class="p-relative">
+                            <input @keydown.enter="addTodo" v-model="newTodo" type="text" class="input-todo">
+                            <button @click="addTodo">ADD</button>
+                        </div>
+                        <ul class="todo-list">
+                            <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex flex-wrap"> 
+                                <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
+                                <p v-else> {{ todo.text }} </p>
+                                <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
         
-    </div>
+    </div> <!--#app-->
     
     <script src="./js/app.js"></script>
 </body>

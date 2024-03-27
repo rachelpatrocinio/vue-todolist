@@ -1,5 +1,7 @@
 :root{
     --red: red;
+    --lightpink: #FFD2E0;
+    --lightgray: lightgray;
 }
 
 /* CSS RESET */
@@ -30,6 +32,10 @@ ul,ol,menu{
     justify-content: space-between;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .line-through{
     text-decoration: line-through;
 }
@@ -38,8 +44,48 @@ ul,ol,menu{
     text-align: center;
 }
 
+.p-relative{
+    position: relative;
+}
+
 /* HEADER */
 
 .main-header{
-    margin: 30px 0;
+    padding: 30px 0;
+    background-color: var(--lightpink);
+}
+
+/* MAIN */
+
+.main-content{
+    padding: 30px 0;
+}
+
+.input-todo{
+    width: 100%;
+    padding: 10px;
+    border-radius: 999px;
+}
+
+.input-todo + button{
+    width: 10%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+/* TODO-LIST */
+
+.todo-list{
+    padding: 30px 0;
+}
+
+.todo-list li{
+    padding: 10px 20px;
+    border-radius: 999px;
+}
+
+.todo-list li:hover{
+    background-color: #eaeaea;
 }
