@@ -24,7 +24,8 @@ createApp({
                     text: 'Pulire Cantina',
                     done: true
                 }
-            ]
+            ],
+            newTodo: ''
         }
     },
     methods:{
@@ -32,6 +33,14 @@ createApp({
             // console.log(todo, i);
             console.log(`deleted: ${todo.text}`);
             this.todos.splice(i,1);
+        },
+        addTodo(){
+            // console.log(this.newTodo);
+            this.newTodo = {
+                text: this.newTodo
+            };
+            this.todos.push(this.newTodo);
+            this.newTodo= '';
         }
     }
 }).mount('#app');
