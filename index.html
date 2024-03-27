@@ -13,7 +13,7 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <input v-model="newTodo" type="text">
+                <input @keydown.enter="addTodo" v-model="newTodo" type="text">
                 <button @click="addTodo">ADD</button>
                 <ul>
                     <li v-for="(todo,i) in todos" class="d-flex"> 
