@@ -27,7 +27,8 @@ createApp({
                     done: true
                 }
             ],
-            newTodo: ''
+            newTodo: '',
+            linethrough: 'line-through'
         }
     },
     methods:{
