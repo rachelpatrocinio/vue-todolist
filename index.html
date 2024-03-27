@@ -30,7 +30,7 @@
                         <ul class="todo-list">
                             <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex space-between"> 
                                 <p :class="todo.done === true ? 'line-through' : ''">{{ todo.text }}</p>
-                                <i @click="deleteTodo(todo, i)"class="fa-solid fa-trash delete-icon"></i>
+                                <i @click.stop="deleteTodo(todo, i)"class="fa-solid fa-trash delete-icon"></i>
                             </li>
                         </ul>
                     </div>
