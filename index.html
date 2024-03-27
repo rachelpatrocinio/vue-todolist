@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c473752e7c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>vue-todolist</title>
 </head>
@@ -10,12 +11,18 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        <ul>
-            <li v-for="todo in todos"> 
-                <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
-                <p v-else> {{ todo.text }} </p>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li v-for="(todo,i) in todos" class="d-flex"> 
+                        <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
+                        <p v-else> {{ todo.text }} </p>
+                        <i class="fa-solid fa-x delete-icon"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
     </div>
     
     <script src="./js/app.js"></script>
