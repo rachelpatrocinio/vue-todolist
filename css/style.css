@@ -90,3 +90,7 @@ ul,ol,menu{
 .todo-list li:hover{
     background-color: #eaeaea;
 }
+
+.todo-list .delete-icon{
+    margin-right: 20px;
+}

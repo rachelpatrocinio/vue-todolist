@@ -31,7 +31,7 @@
                             <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex flex-wrap"> 
                                 <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
                                 <p v-else> {{ todo.text }} </p>
-                                <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>
+                                <i @click="deleteTodo(todo, i)"class="fa-solid fa-trash delete-icon"></i>
                             </li>
                         </ul>
                     </div>
