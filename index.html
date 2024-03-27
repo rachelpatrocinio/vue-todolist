@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/c473752e7c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fredoka:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Roboto:wght@400;700&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>vue-todolist</title>
 </head>
@@ -11,19 +14,27 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <div id="app">
-        <div class="container">
-            <div class="row">
-                <input @keydown.enter="addTodo" v-model="newTodo" type="text">
-                <button @click="addTodo">ADD</button>
-                <ul>
-                    <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex"> 
-                        <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
-                        <p v-else> {{ todo.text }} </p>
-                        <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>
-                    </li>
-                </ul>
+
+        <header class="main-header">
+            <h1 class="main-title" :class="textcenter">{{ title.toUpperCase() }}</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+                <div class="row">
+                    <input @keydown.enter="addTodo" v-model="newTodo" type="text">
+                    <button @click="addTodo">ADD</button>
+                    <ul>
+                        <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex"> 
+                            <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
+                            <p v-else> {{ todo.text }} </p>
+                            <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </main>
+        
     </div>
     
     <script src="./js/app.js"></script>

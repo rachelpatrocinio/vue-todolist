@@ -3,6 +3,8 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            title: 'Things To Do',
+            textcenter: 'text-center',
             todos: [
                 {
                     text: 'Pulire Cucina',
