@@ -27,6 +27,10 @@ ul,ol,menu{
 }
 
 /* UTILITIES */
+.c-red{
+    color: var(--red);
+}
+
 .d-flex{
     display: flex;
 }
