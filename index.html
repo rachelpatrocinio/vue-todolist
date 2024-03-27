@@ -16,7 +16,7 @@
                 <input @keydown.enter="addTodo" v-model="newTodo" type="text">
                 <button @click="addTodo">ADD</button>
                 <ul>
-                    <li v-for="(todo,i) in todos" class="d-flex"> 
+                    <li @click="done(todo)" v-for="(todo,i) in todos" class="d-flex"> 
                         <p class="line-through"v-if="todo.done === true">{{ todo.text }}</p>
                         <p v-else> {{ todo.text }} </p>
                         <i @click="deleteTodo(todo, i)"class="fa-solid fa-x delete-icon"></i>

@@ -37,10 +37,21 @@ createApp({
         addTodo(){
             // console.log(this.newTodo);
             this.newTodo = {
-                text: this.newTodo
+                text: this.newTodo,
+                done: false
             };
             this.todos.push(this.newTodo);
             this.newTodo= '';
+        },
+        done(todo){
+            // console.log(todo);
+            console.log(todo.done);
+            if(todo.done === false){
+                todo.done = true;
+            }
+            else{
+                todo.done = false;
+            };
         }
     }
 }).mount('#app');
